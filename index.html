@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Navbar</title>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: Arial, sans-serif;
+    }
+
+    /* Navigation Bar */
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 15px 20px;
+    }
+
+    .logo{
+        color: red;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+    .nav-links a{
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .nav-links a:hover{
+        color: #ffd700;
+    }
+
+    /* Mobile View */
+    @media (max-width: 768px){
+        .navbar{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-links{
+            flex-direction: column;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .nav-links li{
+            padding: 5px 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Mylove
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>
